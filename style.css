@@ -1,3 +1,9 @@
+:root {
+  --moon-color: #c2e5f4;
+  --box-shadow-1: .2em .2em .2em 2em rgba(224, 31, 134, 0.5), .2em .2em 2em 2em blue;
+  --moon-box: 15px 5px 15px 0 var(--moon-color) inset;
+}
+
 body {
   background: steelblue;
 }
@@ -24,7 +30,7 @@ em:hover {
       width: 100px;
       height: 100px;
       border-radius: 50%;
-      box-shadow: 15px 5px 15px 0 #c2e5f4 inset;
+      box-shadow: var(--moon-box);
     transform: perspective(4em), translateX(20deg);
     transition-duration: .5s;
     }
