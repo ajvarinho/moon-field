@@ -1,0 +1,42 @@
+body {
+  background: steelblue;
+}
+
+h1 {
+  color: white;
+}
+
+em {
+  text-shadow: .3rem 1px 2px steelblue, 0 0 1em blue, 0 0 0.2em blue;
+  transition-duration: .5s;
+}
+
+em:hover {
+    text-shadow: .5rem 5px 5px steelblue, 0 5px 1em white, 0 0 0.2em blue;
+}
+
+.main {
+  display: flex;
+  background: linear-gradient(to bottom,  #64b3f4, #00a1af);
+}    
+
+.moon {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      box-shadow: 15px 5px 15px 0 #c2e5f4 inset;
+    transform: perspective(4em), translateX(20deg);
+    transition-duration: .5s;
+    }
+
+/*, -10px 0px 5px 0 #c2e5f4 inset*/
+
+.move {
+  transform: rotateY(-180deg);
+}
+
+.cutive-mono-regular {
+  font-family: "Cutive Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
