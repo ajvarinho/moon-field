@@ -14,13 +14,25 @@
 
   --radial-1: radial-gradient( circle at 72%, var(--bg-color-1), #333 63%, #eee 0%, #333 0% );
 
+  /* radial-2 kao da je malo suptilniji */
+
+  --radial-2: radial-gradient( circle at 72%, var(--bg-color-1), #272626 100%, #ff8d8d 85%, #333 0% );
+
   --radial-2-box: radial-gradient( circle at 0%, #4fe5db, #333 90%, #eee 90%, #333 50% );
 
   --moon-bg: none;
+
+  --conic-test-1: conic-gradient( from 0.25turn at 42% 17%, #ffecd7, 102deg, #74878f, 244deg, #ebf8e1 );
+  --conic-test-2: conic-gradient( from 0.25turn at 42% 17%, #ffecd7, 24deg, #74878f, 244deg, #ebf8e1 );
+
+  /* gradient-bg */
+  --gradient-bg: linear-gradient(to right, #ff28d3, #5b4dff);
 }
 
 body {
   background: steelblue;
+  margin: 0;
+  padding: 0;
 }
 
 h1 {
@@ -43,6 +55,12 @@ em:hover {
 
 .wrap {
   color: white;
+}
+
+.button-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .btn {

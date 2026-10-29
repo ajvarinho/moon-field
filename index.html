@@ -19,23 +19,22 @@
 
         <div class="wrap cutive-mono-regular">
 
-            <div>
-                <input type="color" id="moon" name="moon" value="#c2e5f4" />
+            <div class="label_wrap">
                 <label for="moon" class="">Moon color</label>
+                <input type="color" id="moon" name="moon" value="#c2e5f4" />
             </div>
 
-            <div class="">
-
+            <div class="switch_wrap">
+                <span class="">Moon Opacity</span>
                 <label class="switch" for="moon_bg">
                     <input type="checkbox" id="moon_bg" name="moon_bg">
                     <span class="slider"></span>
                 </label>
-                <span class="">Moon Opacity</span>
             </div>
 
-            <div>
-                <input type="color" id="background" name="background" value="#c2e5f4" />
+            <div class="label_wrap">
                 <label for="background" class="">Background</label>
+                <input type="color" id="background" name="background" value="#c2e5f4" />
             </div>
 
             <div>
@@ -66,6 +65,7 @@
             </div>
 
             <div>
+                <label for="shape">Moon Shape</label>
                 <input
                 type="range"
                 id="shape"
@@ -74,7 +74,6 @@
                 max="50"
                 value="50"
                 step="1" />
-                <label for="shape">Moon Shape</label>
                 <span id="show_shape">50</span>
             </div>
         </div>
