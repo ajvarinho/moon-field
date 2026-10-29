@@ -43,6 +43,13 @@ em:hover {
   color: white;
 }
 
+.btn {
+  padding: 0.5rem 1rem;
+  border: 1px solid pink;
+  border-radius: 2px;
+  touch-action: manipulation;
+}
+
 .moon {
   width: var(--moon-width);
   height: var(--moon-height);
