@@ -10,7 +10,9 @@
   --txt-hover: .5rem 5px 5px #e3cf28, 0 5px 1em white, 0 0 0.2em #9a90e3;
   --box-shadow-1: .2em .2em .2em 2em rgba(224, 31, 134, 0.5), .2em .2em 2em 2em blue;
 
-  --radial-1: radial-gradient( circle at 72%, #4fe5db, #333 63%, #eee 0%, #333 0% );
+  --bg-color-1: #4fe5db;
+
+  --radial-1: radial-gradient( circle at 72%, var(--bg-color-1), #333 63%, #eee 0%, #333 0% );
 
   --radial-2-box: radial-gradient( circle at 0%, #4fe5db, #333 90%, #eee 90%, #333 50% );
 
