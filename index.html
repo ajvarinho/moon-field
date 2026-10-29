@@ -18,17 +18,21 @@
         <h1 class="cutive-mono-regular">This is a <em>moon</em> field</h1>
 
         <div class="wrap cutive-mono-regular">
+
             <div>
                 <input type="color" id="moon" name="moon" value="#c2e5f4" />
                 <label for="moon" class="">Moon color</label>
             </div>
+
             <div class="">
+
                 <label class="switch" for="moon_bg">
                     <input type="checkbox" id="moon_bg" name="moon_bg">
                     <span class="slider"></span>
                 </label>
-                <span class="">Moon test</span>
+                <span class="">Moon Opacity</span>
             </div>
+
             <div>
                 <input type="color" id="background" name="background" value="#c2e5f4" />
                 <label for="background" class="">Background</label>
@@ -59,6 +63,19 @@
 
                     <button id="add_height" class="btn">+10</button>
                 </div>
+            </div>
+
+            <div>
+                <input
+                type="range"
+                id="shape"
+                name="shape"
+                min="0"
+                max="50"
+                value="50"
+                step="1" />
+                <label for="shape">Moon Shape</label>
+                <span id="show_shape">50</span>
             </div>
         </div>
 

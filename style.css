@@ -53,7 +53,7 @@ em:hover {
 .moon {
   width: var(--moon-width);
   height: var(--moon-height);
-  border-radius: 50%;
+  border-radius: var(--moon-radius);
   box-shadow: var(--moon-box);
   transform: perspective(4em), translateX(20deg);
   transition-duration: .5s;
