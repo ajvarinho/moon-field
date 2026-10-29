@@ -17,23 +17,52 @@
 
         <h1 class="cutive-mono-regular">This is a <em>moon</em> field</h1>
 
-        <div class="color-wrap">
+        <div class="wrap cutive-mono-regular">
             <div>
                 <input type="color" id="moon" name="moon" value="#c2e5f4" />
-                <label for="moon" class="cutive-mono-regular">Moon color</label>
+                <label for="moon" class="">Moon color</label>
             </div>
             <div class="">
                 <label class="switch" for="moon_bg">
                     <input type="checkbox" id="moon_bg" name="moon_bg">
                     <span class="slider"></span>
                 </label>
-                <span class="cutive-mono-regular">Moon test</span>
+                <span class="">Moon test</span>
             </div>
             <div>
                 <input type="color" id="background" name="background" value="#c2e5f4" />
-                <label for="background" class="cutive-mono-regular">Background</label>
+                <label for="background" class="">Background</label>
+            </div>
+
+            <div>
+                <span>Moon width</span>
+                
+                <div class="button-wrap">
+
+                    <button id="remove_width" class="">-10</button>
+
+                    <span id="show_width">100</span>
+
+                    <button id="add_width" class="">+10</button>
+
+                </div>
+            </div>
+
+            <div>
+                <span>Moon height</span>
+                
+                <div class="button-wrap">
+
+                    <button id="remove_height" class="">-10</button>
+
+                    <span id="show_height">100</span>
+
+                    <button id="add_height" class="">+10</button>
+                </div>
             </div>
         </div>
+
+
         <div class="main">
         <div>
             <div class="moon"></div>

@@ -1,11 +1,18 @@
 :root {
+
+  --moon-height: 100px;
+  --moon-width: 100px;
   --moon-color: #c2e5f4;
+  --moon-radius: 50%;
+
   --moon-box: 15px 5px 15px 0 var(--moon-color) inset;
 
   --txt-hover: .5rem 5px 5px #e3cf28, 0 5px 1em white, 0 0 0.2em #9a90e3;
   --box-shadow-1: .2em .2em .2em 2em rgba(224, 31, 134, 0.5), .2em .2em 2em 2em blue;
 
   --radial-1: radial-gradient( circle at 72%, #4fe5db, #333 63%, #eee 0%, #333 0% );
+
+  --radial-2-box: radial-gradient( circle at 0%, #4fe5db, #333 90%, #eee 90%, #333 50% );
 
   --moon-bg: none;
 }
@@ -32,16 +39,20 @@ em:hover {
   background: linear-gradient(to bottom,  #64b3f4, #00a1af);
 }    
 
+.wrap {
+  color: white;
+}
+
 .moon {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      box-shadow: var(--moon-box);
-    transform: perspective(4em), translateX(20deg);
-    transition-duration: .5s;
-    /**/
-    background: var(--moon-bg);
-    }
+  width: var(--moon-width);
+  height: var(--moon-height);
+  border-radius: 50%;
+  box-shadow: var(--moon-box);
+  transform: perspective(4em), translateX(20deg);
+  transition-duration: .5s;
+  /**/
+  background: var(--moon-bg);
+}
 
 /*, -10px 0px 5px 0 #c2e5f4 inset*/
 
