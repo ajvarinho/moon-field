@@ -63,7 +63,10 @@ em:hover {
   justify-content: space-between;
 }
 
-.nav_btn.active { border-bottom: 2px solid currentColor; font-weight: 600; }
+.nav_btn.active { 
+  border-bottom: 2px solid currentColor; 
+  font-weight: 600; 
+}
 
 .wrap_card {
   color: white;
@@ -73,9 +76,8 @@ em:hover {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  margin-top: 2rem;
   position: absolute;
-  width: 100%;
+  width: 94%;
   background: var(--moon-bg);
   z-index: 2;
 }
