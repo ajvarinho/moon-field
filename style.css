@@ -63,6 +63,15 @@ em:hover {
   justify-content: space-between;
 }
 
+button {
+    padding: 0;
+  border: none;
+  outline: none;
+  font: inherit;
+  color: inherit;
+  background: none;
+}
+
 .nav_btn.active { 
   border-bottom: 2px solid currentColor; 
   font-weight: 600; 
