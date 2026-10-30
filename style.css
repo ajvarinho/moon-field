@@ -54,10 +54,34 @@ em:hover {
 }    
 
 .wrap {
-  color: white;
+
 }
 
-.button-wrap {
+.wrap_flex {
+  display: flex;
+  align-content: space-between;
+  justify-content: space-between;
+}
+
+.wrap_card {
+  color: white;
+  padding-inline-start: 1rem;
+  padding-inline-end: 1rem;
+}
+
+.label_wrap {
+
+}
+
+.switch_wrap {
+
+}
+
+.button_wrap {
+
+}
+
+.button-wrap > div {
   display: flex;
   align-items: center;
   gap: 0.5rem;

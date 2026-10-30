@@ -17,30 +17,30 @@
 
         <h1 class="cutive-mono-regular">This is a <em>moon</em> field</h1>
 
-        <div class="wrap cutive-mono-regular">
+        <div class="wrap_card cutive-mono-regular">
 
-            <div class="label_wrap">
+            <div class="label_wrap wrap_flex">
                 <label for="moon" class="">Moon color</label>
                 <input type="color" id="moon" name="moon" value="#c2e5f4" />
             </div>
 
-            <div class="switch_wrap">
-                <span class="">Moon Opacity</span>
+            <div class="switch_wrap wrap_flex">
+                <span class="">Moon background</span>
                 <label class="switch" for="moon_bg">
                     <input type="checkbox" id="moon_bg" name="moon_bg">
                     <span class="slider"></span>
                 </label>
             </div>
 
-            <div class="label_wrap">
-                <label for="background" class="">Background</label>
+            <div class="label_wrap wrap_flex">
+                <label for="background" class="">Background color</label>
                 <input type="color" id="background" name="background" value="#c2e5f4" />
             </div>
 
-            <div>
+            <div class="button_wrap wrap_flex">
                 <span>Moon width</span>
                 
-                <div class="button-wrap">
+                <div class="">
 
                     <button id="remove_width" class="btn">-10</button>
 
@@ -51,10 +51,10 @@
                 </div>
             </div>
 
-            <div>
+            <div class="button_wrap wrap_flex">
                 <span>Moon height</span>
                 
-                <div class="button-wrap">
+                <div class="">
 
                     <button id="remove_height" class="btn">-10</button>
 
@@ -66,6 +66,7 @@
 
             <div>
                 <label for="shape">Moon Shape</label>
+                <span></span>
                 <input
                 type="range"
                 id="shape"
@@ -74,6 +75,7 @@
                 max="50"
                 value="50"
                 step="1" />
+                <span></span>
                 <span id="show_shape">50</span>
             </div>
         </div>
