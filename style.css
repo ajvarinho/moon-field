@@ -54,7 +54,7 @@ em:hover {
 }    
 
 .wrap {
-
+  position: relative;
 }
 
 .wrap_flex {
@@ -63,10 +63,25 @@ em:hover {
   justify-content: space-between;
 }
 
+.nav_btn.active { border-bottom: 2px solid currentColor; font-weight: 600; }
+
 .wrap_card {
   color: white;
   padding-inline-start: 1rem;
   padding-inline-end: 1rem;
+  /**/
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+  position: absolute;
+  width: 100%;
+  background: var(--moon-bg);
+  z-index: 2;
+}
+
+.wrap_card[hidden] {
+  display: none !important;
 }
 
 .label_wrap {

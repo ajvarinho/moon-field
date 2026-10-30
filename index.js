@@ -16,6 +16,31 @@ const removeHeight = document.getElementById('remove_height');
 const showWidth = document.getElementById('show_width');
 const showHeight = document.getElementById('show_height');
 
+/**
+ * tab navigation
+ */
+
+const tabs = document.querySelectorAll('.nav_btn');
+const panels = document.querySelectorAll('[role="tabpanel"]');
+
+function showTab(tab) {
+  // update the buttons
+  tabs.forEach(t => {
+    const isActive = t === tab;
+    t.classList.toggle('active', isActive);
+    t.setAttribute('aria-selected', isActive);
+  });
+
+  // update the panels
+  panels.forEach(p => {
+    p.hidden = p.id !== tab.dataset.tab;
+  });
+}
+
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => showTab(tab));
+});
+
 
 /**
  * change height and width

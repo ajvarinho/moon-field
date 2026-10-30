@@ -17,69 +17,104 @@
 
         <h1 class="cutive-mono-regular">This is a <em>moon</em> field</h1>
 
-        <div class="wrap_card cutive-mono-regular">
+        <div class="wrap">
 
-            <div class="label_wrap wrap_flex">
-                <label for="moon" class="">Moon color</label>
-                <input type="color" id="moon" name="moon" value="#c2e5f4" />
+            <div class="title_wrap wrap_flex" role="tablist">
+                <button class="nav_btn active" role="tab" data-tab="panel-moon" aria-selected="true">Moon</button>
+                <button class="nav_btn" role="tab" data-tab="panel-bg" aria-selected="false">Background</button>
+                <button class="nav_btn" role="tab" data-tab="panel-grid" aria-selected="false">Grid</button>
+                <button class="nav_btn" role="tab" data-tab="panel-text" aria-selected="false">Text</button>
             </div>
 
-            <div class="switch_wrap wrap_flex">
-                <span class="">Moon background</span>
-                <label class="switch" for="moon_bg">
-                    <input type="checkbox" id="moon_bg" name="moon_bg">
-                    <span class="slider"></span>
-                </label>
-            </div>
+            <!-- MOON -->
 
-            <div class="label_wrap wrap_flex">
-                <label for="background" class="">Background color</label>
-                <input type="color" id="background" name="background" value="#c2e5f4" />
-            </div>
+            <div class="wrap_card cutive-mono-regular" role="tabpanel" id="panel-moon" aria-labelledby="tab-moon">
 
-            <div class="button_wrap wrap_flex">
-                <span>Moon width</span>
-                
-                <div class="">
+                <div class="label_wrap wrap_flex">
+                    <label for="moon" class="">Moon color</label>
+                    <input type="color" id="moon" name="moon" value="#c2e5f4" />
+                </div>
 
-                    <button id="remove_width" class="btn">-10</button>
+                <div class="switch_wrap wrap_flex">
+                    <span class="">Moon background</span>
+                    <label class="switch" for="moon_bg">
+                        <input type="checkbox" id="moon_bg" name="moon_bg">
+                        <span class="slider"></span>
+                    </label>
+                </div>
 
-                    <span id="show_width">100</span>
+                <div class="label_wrap wrap_flex">
+                    <label for="background" class="">Background color</label>
+                    <input type="color" id="background" name="background" value="#c2e5f4" />
+                </div>
 
-                    <button id="add_width" class="btn">+10</button>
+                <div class="button_wrap wrap_flex">
+                    <span>Moon width</span>
+                    
+                    <div class="">
 
+                        <button id="remove_width" class="btn">-10</button>
+
+                        <span id="show_width">100</span>
+
+                        <button id="add_width" class="btn">+10</button>
+
+                    </div>
+                </div>
+
+                <div class="button_wrap wrap_flex">
+                    <span>Moon height</span>
+                    
+                    <div class="">
+
+                        <button id="remove_height" class="btn">-10</button>
+
+                        <span id="show_height">100</span>
+
+                        <button id="add_height" class="btn">+10</button>
+                    </div>
+                </div>
+
+                <div>
+                    <label for="shape">Moon Shape</label>
+                    <span></span>
+                    <input
+                    type="range"
+                    id="shape"
+                    name="shape"
+                    min="0"
+                    max="50"
+                    value="50"
+                    step="1" />
+                    <span></span>
+                    <span id="show_shape">50</span>
                 </div>
             </div>
 
-            <div class="button_wrap wrap_flex">
-                <span>Moon height</span>
-                
-                <div class="">
+            <div class="wrap_card cutive-mono-regular" role="tabpanel" id="panel-bg" aria-labelledby="tab-bg" hidden>
+                <div class="label_wrap wrap_flex">
+                    <label for="moon" class="">Background color</label>
+                    <input type="color" id="bg_main" name="bg_main" value="#c2e5f4" />
+                </div>
 
-                    <button id="remove_height" class="btn">-10</button>
-
-                    <span id="show_height">100</span>
-
-                    <button id="add_height" class="btn">+10</button>
+                <div class="switch_wrap wrap_flex">
+                    <span class="">Linear background</span>
+                    <label class="switch" for="linear_bg">
+                        <input type="checkbox" id="linear_bg" name="linear_bg">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="label_wrap wrap_flex">
+                    <label for="linear_color" class="">Linear color</label>
+                    <input type="color" id="linear_color" name="linear_color" value="#c2e5f4" />
                 </div>
             </div>
 
-            <div>
-                <label for="shape">Moon Shape</label>
-                <span></span>
-                <input
-                type="range"
-                id="shape"
-                name="shape"
-                min="0"
-                max="50"
-                value="50"
-                step="1" />
-                <span></span>
-                <span id="show_shape">50</span>
+            
+            <div class="wrap_card cutive-mono-regular" role="tabpanel" id="panel-grid" aria-labelledby="tab-bg" hidden>
+                i am another tab - grid
             </div>
         </div>
-
 
         <div class="main">
         <div>
