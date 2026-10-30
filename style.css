@@ -22,6 +22,13 @@
 
   --moon-bg: none;
 
+
+  --main-bg-1:#64b3f4;
+  --main-bg-2: #00a1af;
+
+  --main-single-value: var(--main-bg-1);
+  --main-linear: linear-gradient(to bottom,  var(--main-bg-1), var(--main-bg-2));
+
   --conic-test-1: conic-gradient( from 0.25turn at 42% 17%, #ffecd7, 102deg, #74878f, 244deg, #ebf8e1 );
   --conic-test-2: conic-gradient( from 0.25turn at 42% 17%, #ffecd7, 24deg, #74878f, 244deg, #ebf8e1 );
 
@@ -48,10 +55,16 @@ em:hover {
     text-shadow: .5rem 5px 5px steelblue, 0 5px 1em white, 0 0 0.2em blue;
 }
 
+
+
 .main {
   display: flex;
-  background: linear-gradient(to bottom,  #64b3f4, #00a1af);
+  background: var(--main-bg-1);
 }    
+
+.main.linear {
+  background: linear-gradient(to bottom, var(--main-bg-1), var(--main-bg-2));
+}
 
 .wrap {
   position: relative;
@@ -96,19 +109,9 @@ button {
   width: 94%;
   z-index: 2;
   padding: 2rem 1rem;
+  background: linear-gradient(to bottom, #64b3f4, steelblue);
 }
 
-#panel-moon {
-  background: linear-gradient(to right,  #64b3f4, #000, black, black);
-}
-
-#panel-bg {
-  background: linear-gradient(to right, black,  #64b3f4, black, #000);
-}
-
-#panel-grid {
-  background: linear-gradient(to right, black, #000, #64b3f4, black);
-}
 
 .wrap_card[hidden] {
   display: none !important;

@@ -24,14 +24,25 @@ const tabs = document.querySelectorAll('.nav_btn');
 const panels = document.querySelectorAll('[role="tabpanel"]');
 
 function showTab(tab) {
+
+  const isOpen = tab.classList.contains('active');
+
+  // on mobile, tapping the active tab closes it
+  if (isOpen) {
+    closeAllTabs();
+    return;
+  }
+
+  //TODO - add visual reference to close fn (span in btn)
+
   // update the buttons
   tabs.forEach(t => {
     const isActive = t === tab;
     t.classList.toggle('active', isActive);
     t.setAttribute('aria-selected', isActive);
+
   });
 
-  // update the panels
   panels.forEach(p => {
     p.hidden = p.id !== tab.dataset.tab;
   });
@@ -40,6 +51,21 @@ function showTab(tab) {
 tabs.forEach(tab => {
   tab.addEventListener('click', () => showTab(tab));
 });
+
+//close tabs
+
+const mobileQuery = window.matchMedia('(max-width: 600px)');
+
+function closeAllTabs() {
+  tabs.forEach(t => {
+    t.classList.remove('active');
+    t.setAttribute('aria-selected', 'false');
+  });
+  panels.forEach(p => p.hidden = true);
+}
+
+// start closed on mobile
+if (mobileQuery.matches) closeAllTabs();
 
 
 /**
@@ -172,6 +198,43 @@ const background = 'radial-gradient( circle at 72%, #4fe5db, #333 63%, #eee 0%, 
 function toggleMoonBg(event){
   let isBg = event.target.checked;
   isBg ? document.documentElement.style.setProperty('--moon-bg', 'var(--radial-1)') :  document.documentElement.style.setProperty('--moon-bg', 'none');
+}
+
+/**
+ * change background color
+ */
+
+const bgMainColor = document.getElementById('bg_main');
+
+bgMainColor.addEventListener("change", changeBackgroundColor);
+function changeBackgroundColor(event) {
+  let bgColorOne = event.target.value;
+  document.documentElement.style.setProperty('--main-bg-1', bgColorOne);
+}
+
+/**
+ * background gradient switch
+ */
+
+
+const bgLinearSwitch = document.getElementById('linear_bg');
+bgLinearSwitch.addEventListener('change', toggleLinearBg)
+function toggleLinearBg(event){
+  let isLinearBg = event.target.checked;
+  document.querySelector('.main').classList.toggle('linear', isLinearBg);
+  console.log('alo', isLinearBg)
+  //isLinearBg ? document.documentElement.style.setProperty('--main-bg-1', 'var(--main-linear)') :  document.documentElement.style.setProperty('--main-bg-1', 'var(--main-single-value)');
+}
+
+/**
+ * change second gradient color
+ */
+
+const linearColor = document.getElementById('linear_color');
+linearColor.addEventListener('change', changeLinearColor);
+function changeLinearColor(event){
+  let linearColor = event.target.value;
+  document.documentElement.style.setProperty('--main-bg-2', linearColor);
 }
 
 /**
