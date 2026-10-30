@@ -72,6 +72,13 @@ button {
   background: none;
 }
 
+.nav_btn {
+  font-size: 1.5em;
+  color: white;
+    font-family: "Cutive Mono", monospace;
+  font-weight: 400;
+}
+
 .nav_btn.active { 
   border-bottom: 2px solid currentColor; 
   font-weight: 600; 
@@ -87,8 +94,20 @@ button {
   gap: 1rem;
   position: absolute;
   width: 94%;
-  background: var(--moon-bg);
   z-index: 2;
+  padding: 2rem 1rem;
+}
+
+#panel-moon {
+  background: linear-gradient(to right,  #64b3f4, #000, black, black);
+}
+
+#panel-bg {
+  background: linear-gradient(to right, black,  #64b3f4, black, #000);
+}
+
+#panel-grid {
+  background: linear-gradient(to right, black, #000, #64b3f4, black);
 }
 
 .wrap_card[hidden] {
