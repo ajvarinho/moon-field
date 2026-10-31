@@ -60,7 +60,7 @@ em:hover {
   display: grid;
   grid-template-columns: repeat(auto-fill, var(--moon-width));
   grid-template-rows: repeat(auto-fill, var(--moon-height));
-  justify-content: space-evenly;
+  justify-content: center;
 }    
 
 /* grid-auto-columns: minmax(10px, 300px);
