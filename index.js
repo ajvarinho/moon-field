@@ -137,9 +137,9 @@ removeWidth.addEventListener('click', removeTen);
 removeHeight.addEventListener('click', removeTen);
 
 
+//copied in 
 
-
-const moons = document.querySelectorAll('.moon');
+//const moons = document.querySelectorAll('.moon');
 
 /**
  * toggle background
@@ -237,12 +237,63 @@ function changeLinearColor(event){
 }
 
 /**
- * 
+ * create grid
  */
 
-moons.forEach((element)=>{ element.addEventListener('mouseover', ()=> {
-   element.classList.toggle('move')
-  })
+const mainWrap = document.querySelector('.main');
+
+function createMoons(num){
+
+  mainWrap.replaceChildren();
+
+  const newFragment = document.createDocumentFragment();
+
+  for(let i = 0; i < num; i++){
+    let moon = document.createElement('div');
+    let test = document.createElement('span')
+    test.innerText = i
+    moon.setAttribute('class', 'moon');
+    newFragment.appendChild(moon);
+    //dodati mix grid
+    //mainWrap.appendChild(test)
+  }
+
+  mainWrap.appendChild(newFragment);
+}
+
+/**
+ * grid number of elements
+ */
+
+const moonNr = document.getElementById('moon_nr');
+
+moonNr.addEventListener('change', updateMoonGrid);
+
+function updateMoonGrid(event){
+  let number = event.target.value;
+  createMoons(number);
+  addListener();
+}
+
+window.addEventListener("load", (event) => {
+  //initial number
+  createMoons(12);
+  addListener();
 })
+
+
+function addListener(){
+   const moons = document.querySelectorAll('.moon');
+    moons.forEach((element)=>{ element.addEventListener('mouseover', ()=> {
+    element.classList.toggle('move')
+    })
+  })
+ }
+
+
+// moons.forEach((element)=>{ element.addEventListener('mouseover', ()=> {
+//    element.classList.toggle('move')
+//   })
+// })
 
 let a = []
