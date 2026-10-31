@@ -160,6 +160,10 @@ button {
   background: var(--moon-bg);
 }
 
+.hidden {
+  opacity: 0;
+}
+
 /*, -10px 0px 5px 0 #c2e5f4 inset*/
 
 .move {

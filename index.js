@@ -66,7 +66,7 @@ function closeAllTabs() {
 
 // start closed on mobile
 if (mobileQuery.matches) closeAllTabs();
-
+closeAllTabs();
 
 /**
  * change height and width
@@ -273,22 +273,49 @@ function updateMoonGrid(event){
   let number = event.target.value;
   createMoons(number);
   addListener();
-}
+};
 
 window.addEventListener("load", (event) => {
   //initial number
-  createMoons(12);
+  createMoons(50);
   addListener();
+  randomize();
+});
+
+function randomize(){
+  const moons = document.querySelectorAll('.moon');
+//array, random funkcija i udri
+  let testArr = [];
+  for(let i = 0; i < moons.length / 2; i++){
+    testArr.push(getRandomInt(0, moons.length));
+  }
+
+  testArr.forEach(index => {
+    moons[index].classList.add('hidden');
+  });
+
+  console.log('thru')
+}
+
+const randomizeBtn = document.getElementById('randomize');
+
+randomizeBtn.addEventListener('click', ()=>{
+  randomize();
 })
 
+function getRandomInt(min, max) {
+  const minCeiled = Math.ceil(min);
+  const maxFloored = Math.floor(max);
+  return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled); // The maximum is exclusive and the minimum is inclusive
+}
 
 function addListener(){
    const moons = document.querySelectorAll('.moon');
     moons.forEach((element)=>{ element.addEventListener('mouseover', ()=> {
-    element.classList.toggle('move')
-    })
-  })
- }
+    element.classList.toggle('move');
+    });
+  });
+ };
 
 
 // moons.forEach((element)=>{ element.addEventListener('mouseover', ()=> {
