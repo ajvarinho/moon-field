@@ -222,7 +222,6 @@ bgLinearSwitch.addEventListener('change', toggleLinearBg)
 function toggleLinearBg(event){
   let isLinearBg = event.target.checked;
   document.querySelector('.main').classList.toggle('linear', isLinearBg);
-  console.log('alo', isLinearBg)
   //isLinearBg ? document.documentElement.style.setProperty('--main-bg-1', 'var(--main-linear)') :  document.documentElement.style.setProperty('--main-bg-1', 'var(--main-single-value)');
 }
 
@@ -245,3 +244,5 @@ moons.forEach((element)=>{ element.addEventListener('mouseover', ()=> {
    element.classList.toggle('move')
   })
 })
+
+let a = []
