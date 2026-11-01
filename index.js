@@ -279,7 +279,6 @@ window.addEventListener("load", (event) => {
   //initial number
   createMoons(50);
   addListener();
-  randomize();
 });
 
 function randomize(){
