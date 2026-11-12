@@ -230,3 +230,40 @@ input:checked + .slider:before {
   -ms-transform: translateX(26px);
   transform: translateX(26px);
 }
+
+
+/*  >>>>  3D EXPERIMENT   <<<<   */
+
+.wrap_main {
+  position: relative;
+  perspective: 10px;
+}
+
+.space {
+  transform-style: preserve-3d;
+}
+
+.plan {
+  width: 20rem;
+  border: 1px solid blue;
+}
+
+.top {
+  transform: translateZ(0px);
+}
+
+.middle {
+  transform: translateZ(-10px);
+}
+
+.bottom {
+  transform: translateZ(-20px);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, var(--moon-width));
+  grid-template-rows: repeat(auto-fill, var(--moon-height));
+  width: 100%;
+  border: 1px solid;
+}

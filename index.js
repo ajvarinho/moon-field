@@ -275,11 +275,11 @@ function updateMoonGrid(event){
   addListener();
 };
 
-window.addEventListener("load", (event) => {
-  //initial number
-  createMoons(50);
-  addListener();
-});
+// window.addEventListener("load", (event) => {
+//   //initial number
+//   createMoons(50);
+//   addListener();
+// });
 
 function randomize(){
   const moons = document.querySelectorAll('.moon');
@@ -315,6 +315,8 @@ function addListener(){
     });
   });
  };
+
+
 
 
 // moons.forEach((element)=>{ element.addEventListener('mouseover', ()=> {
